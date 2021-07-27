@@ -1,0 +1,26 @@
+{
+  "name": "rainchance",
+  "version": "1.0.0",
+  "description": "screwing around with a weather api, learning about server stuff",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KorwinBriggs/rainchance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KorwinBriggs/rainchance/issues"
+  },
+  "homepage": "https://github.com/KorwinBriggs/rainchance#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1",
+    "postman-request": "^2.88.1-postman.30"
+  }
+}
