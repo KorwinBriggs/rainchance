@@ -1,6 +1,7 @@
 import request from 'postman-request'
 import axios from 'axios'
 import fetch from 'node-fetch'
+import geocode from './utils/geocode.js'
 //These all do the same thing, but i'm importing both to learn both.
 //Also, asking the internet whether ot use axios or node-fetch was a four
 //hour rabbit hole that contained a lot of posturing but no sure answers.
@@ -9,7 +10,7 @@ import fetch from 'node-fetch'
 const urlWeather = 'http://api.weatherstack.com/current?access_key=9dedbc55814438072235d930b8d5fa45&query=37.8267,-122.4233&units=f'
 const urlGeo = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoia29yd2luIiwiYSI6ImNrcm1iM25wMjF4MjQyb280b3VndWc1amEifQ.XG-Vj5_uZaWDNF9DSwr9HQ&limit=1'
 
-//REQUEST
+// //REQUEST
 
 // request( {url: urlWeather, json: true}, (err, res) => {
 //     if (err) { 
@@ -35,6 +36,13 @@ const urlGeo = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.
 //         console.log("Longitude: " + longitude)
 //     }
 // })
+
+
+geocode('the white house', (error, data) => {
+    console.log(error)
+    console.log(data)
+})
+
 
 
 
