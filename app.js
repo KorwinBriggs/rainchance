@@ -13,17 +13,17 @@ if (args.length === 0) {
 
     const allArgs = process.argv.slice(2).join(' ')
 
-    geocode(allArgs, (error, data) => {
+    geocode(allArgs, (error, {latitude, longitude, location} = {} ) => {
         if (error) {
             return console.log(error)
         }
 
-        forecast(data.latitude, data.longitude, (error, forecastData) => {
+        forecast(latitude, longitude, (error, forecastData) => {
             if (error) {
                 return console.log(error)
             }
             
-            console.log(data.location)
+            console.log(location)
             console.log(forecastData)
         })
     })
